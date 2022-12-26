@@ -2,7 +2,7 @@ package transport;
 
 import driver.D;
 
-public class Bus<D extends driver.D> extends Transport{
+public class Bus extends Transport<D>{
     private D driver;
     public Bus(String brand, String model, double volume) {
         super(brand, model, volume);

@@ -7,20 +7,20 @@ import transport.Truck;
 
 public class Main {
     public static void main(String[] args) {
-        Bus<driver.D> mercedes = new Bus<driver.D>("Mercedes", "Slinter II", 1.8);
-        Bus<driver.D> hyundai1 = new Bus<driver.D>("Hyundai", "H350", 1.9);
-        Bus<driver.D> volvo = new Bus<driver.D>("Volvo", "9500", 2.1);
-        Bus<driver.D> ford = new Bus<driver.D>("Ford", "G-468", 2.2);
+        Bus mercedes = new Bus("Mercedes", "Slinter II", 1.8);
+        Bus hyundai1 = new Bus("Hyundai", "H350", 1.9);
+        Bus volvo = new Bus("Volvo", "9500", 2.1);
+        Bus ford = new Bus("Ford", "G-468", 2.2);
 
-        Car<driver.B> lada = new Car<driver.B>("Lada", "Granta", 1.7);
-        Car<driver.B> audi = new Car<driver.B>("Audi", "A8 50 L TDI quattro", 3.0);
-        Car<driver.B> bmw = new Car<driver.B>("BMW", "Z8", 3.0);
-        Car<driver.B> kia = new Car<driver.B>("Kia", "Sportage 4-го поколения", 2.4);
+        Car lada = new Car("Lada", "Granta", 1.7);
+        Car audi = new Car("Audi", "A8 50 L TDI quattro", 3.0);
+        Car bmw = new Car("BMW", "Z8", 3.0);
+        Car kia = new Car("Kia", "Sportage 4-го поколения", 2.4);
 
-        Truck<driver.C> truck1 = new Truck<driver.C>("Mercedes-Benz", "Actros", 1.6);
-        Truck<driver.C> truck2 = new Truck<driver.C>(" MAZ", "5440", 1.8);
-        Truck<driver.C> truck3 = new Truck<driver.C>(" KrAZ", "6320", 1.9);
-        Truck<driver.C> truck4 = new Truck<driver.C>("MAN", "TGX", 1.7);
+        Truck truck1 = new Truck("Mercedes-Benz", "Actros", 1.6);
+        Truck truck2 = new Truck(" MAZ", "5440", 1.8);
+        Truck truck3 = new Truck(" KrAZ", "6320", 1.9);
+        Truck truck4 = new Truck("MAN", "TGX", 1.7);
 
         truck1.pitStop();
         mercedes.stop();

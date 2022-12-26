@@ -2,7 +2,7 @@ package transport;
 
 import driver.C;
 
-public class Truck<C extends driver.C> extends Transport{
+public class Truck extends Transport<C>{
     private C driver;
     public Truck(String brand, String model, double volume) {
         super(brand, model, volume);

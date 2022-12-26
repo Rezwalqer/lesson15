@@ -4,7 +4,7 @@ import driver.B;
 
 import java.time.LocalDate;
 
-public class Car<B extends driver.B> extends Transport {
+public class Car extends Transport<B> {
     private B driver;
 
     @Override
