@@ -1,3 +1,5 @@
+package transport;
+
 import driver.B;
 import driver.C;
 import driver.D;
@@ -12,10 +14,10 @@ public class Main {
         Bus volvo = new Bus("Volvo", "9500", 2.1);
         Bus ford = new Bus("Ford", "G-468", 2.2);
 
-        Car lada = new Car("Lada", "Granta", 1.7);
-        Car audi = new Car("Audi", "A8 50 L TDI quattro", 3.0);
-        Car bmw = new Car("BMW", "Z8", 3.0);
-        Car kia = new Car("Kia", "Sportage 4-го поколения", 2.4);
+        Car lada = new Car("Lada", "Granta", 1.7, Car.BodyType.OFFROAD);
+        Car audi = new Car("Audi", "A8 50 L TDI quattro", 3.0, Car.BodyType.COUPE);
+        Car bmw = new Car("BMW", "Z8", 3.0, Car.BodyType.HETCHBACK);
+        Car kia = new Car("Kia", "Sportage 4-го поколения", 2.4, Car.BodyType.MINIVAN);
 
         Truck truck1 = new Truck("Mercedes-Benz", "Actros", 1.6);
         Truck truck2 = new Truck(" MAZ", "5440", 1.8);
@@ -35,12 +37,18 @@ public class Main {
         D driver5 = new D("Иванов Владимир Владимирович", true, 25);
         D driver6 = new D("Иванов Антон Антонович", true, 27);
 
-        truck1.setDriver(driver3);
-        truck1.info();
-        lada.setDriver(driver1);
-        lada.info();
-        ford.setDriver(driver6);
-        ford.info();
+//        truck1.setDriver(driver3);
+//        truck1.info();
+//        lada.setDriver(driver1);
+//        lada.info();
+//        ford.setDriver(driver6);
+//        ford.info();
+        lada.setBodyType(Car.BodyType.SIDAN);
+        lada.printType();
+        truck1.setLoadCapacity(Truck.LoadCapacity.N3);
+        truck1.printType();
+        ford.setPeopleCapacity(Bus.PeopleCapacity.SIZE1);
+        ford.printType();
     }
 
 }

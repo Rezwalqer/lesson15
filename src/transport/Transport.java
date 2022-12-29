@@ -65,5 +65,7 @@ public abstract class Transport<T extends Driver> implements Competitive {
     }
 
     abstract void info();
-    }
+
+    abstract void printType();
+}
 

@@ -5,7 +5,43 @@ import driver.B;
 import java.time.LocalDate;
 
 public class Car extends Transport<B> {
-    private B driver;
+    public enum BodyType {
+        SIDAN("Сидан"),
+        HETCHBACK("Хэчбэк"),
+        COUPE("Купе"),
+        UNIVERSAL("Универсал"),
+        OFFROAD("Внедорожник"),
+        CROSSOVER("Кроссовер"),
+        PICKUP("Пикап"),
+        VAN("Фургон"),
+        MINIVAN("Минивэн");
+        private final String bodyType;
+
+        BodyType(String bodyType) {
+            this.bodyType = bodyType;
+        }
+
+        public String getBodyType() {
+            return bodyType;
+        }
+
+
+
+        @Override
+        public String toString() {
+            return "Тип кузова: " + bodyType;
+        }
+    }
+
+    private BodyType bodyType;
+
+    public BodyType getBodyType() {
+        return bodyType;
+    }
+
+    public void setBodyType(BodyType bodyType) {
+        this.bodyType = bodyType;
+    }
 
     @Override
     public B getDriver() {
@@ -16,7 +52,7 @@ public class Car extends Transport<B> {
         this.driver = driver;
     }
 
-    public Car(String brand, String model, double volume) {
+    public Car(String brand, String model, double volume, BodyType bodyType) {
         super(brand, model, volume);
     }
 
@@ -32,6 +68,11 @@ public class Car extends Transport<B> {
     public void pitStop() {
         System.out.println(getBrand() + " " + getModel() + " остановился на пит-стоп. Это заняло 6 секунд");
 
+    }
+
+    @Override
+    void printType() {
+        System.out.println(bodyType.toString());
     }
 
     @Override

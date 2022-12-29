@@ -2,12 +2,38 @@ package transport;
 
 import driver.C;
 
-public class Truck extends Transport<C>{
-    private C driver;
+public class Truck extends Transport<C> {
+
     public Truck(String brand, String model, double volume) {
         super(brand, model, volume);
     }
 
+    public enum LoadCapacity {
+        N1(null, 3.5f),
+
+        N2(3.5f, 12f),
+        N3(12f, null);
+        private final Float from;
+        private final Float to;
+
+        LoadCapacity(Float from, Float to) {
+            this.from = from;
+            this.to = to;
+        }
+
+        @Override
+        public String toString() {
+            if (from == null) {
+                return "Грузоподъемность автомобиля составляет " + to + " тонн.";
+            } else if (to == null) {
+                return "Грузоподъемность автомобиля составляет более " + from + " тонн.";
+            } else {
+                return "Грузоподъемность автомобиля составляет от " + from + " до " + to + " тонн.";
+            }
+        }
+    }
+
+    private LoadCapacity loadCapacity;
 
 
     public void start() {
@@ -35,6 +61,15 @@ public class Truck extends Transport<C>{
 
     }
 
+    public LoadCapacity getLoadCapacity() {
+        return loadCapacity;
+    }
+
+
+    public void setLoadCapacity(LoadCapacity loadCapacity) {
+        this.loadCapacity = loadCapacity;
+    }
+
     @Override
     public C getDriver() {
         return driver;
@@ -45,9 +80,13 @@ public class Truck extends Transport<C>{
     }
 
     public void info() {
-        System.out.println("Водитель " + getDriver().getName() + " управляет автомобилем "+ getBrand() + " " + getModel() +  "и будет участвовать в заезде");
+        System.out.println("Водитель " + getDriver().getName() + " управляет автомобилем " + getBrand() + " " + getModel() + "и будет участвовать в заезде");
     }
 
+    @Override
+    void printType() {
+        System.out.println(loadCapacity.toString());
+    }
 
 
 }
