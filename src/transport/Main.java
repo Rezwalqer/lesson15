@@ -3,6 +3,7 @@ package transport;
 import driver.B;
 import driver.C;
 import driver.D;
+import driver.DriverLicense;
 import transport.Bus;
 import transport.Car;
 import transport.Truck;
@@ -30,25 +31,40 @@ public class Main {
         lada.getMaxSpeed();
         truck4.getBestCircleTime();
 
-        B driver1 = new B("Иванов Сергей Сергеевич", true, 15);
-        B driver2 = new B("Иванов Степан Степанович", true, 11);
-        C driver3 = new C("Иванов Иван Андреевич", true, 15);
-        C driver4 = new C("Иванов Александр Сергеевич", true, 15);
-        D driver5 = new D("Иванов Владимир Владимирович", true, 25);
-        D driver6 = new D("Иванов Антон Антонович", true, 27);
+        B driver1 = new B("Иванов Сергей Сергеевич", true, 15, DriverLicense.B);
+        B driver2 = new B("Иванов Степан Степанович", true, 11, DriverLicense.D);
+        C driver3 = new C("Иванов Иван Андреевич", true, 15, DriverLicense.B);
+        C driver4 = new C("Иванов Александр Сергеевич", true, 15, DriverLicense.C);
+        D driver5 = new D("Иванов Владимир Владимирович", true, 25, DriverLicense.D);
+        D driver6 = new D("Иванов Антон Антонович", true, 27, null);
 
-//        truck1.setDriver(driver3);
-//        truck1.info();
-//        lada.setDriver(driver1);
-//        lada.info();
-//        ford.setDriver(driver6);
-//        ford.info();
+        truck1.setDriver(driver3);
+        truck1.info();
+        lada.setDriver(driver1);
+        lada.info();
+        ford.setDriver(driver6);
+        ford.info();
         lada.setBodyType(Car.BodyType.SIDAN);
         lada.printType();
         truck1.setLoadCapacity(Truck.LoadCapacity.N3);
         truck1.printType();
         ford.setPeopleCapacity(Bus.PeopleCapacity.SIZE1);
         ford.printType();
+
+        lada.getDiagnosed();
+        truck1.getDiagnosed();
+        try {
+            ford.getDiagnosed();
+        } catch (DiagnosticException e) {
+            throw new RuntimeException(e);
+        }
+
+        try {
+            truck1.checkingLicense();
+        } catch (IncorrectLicenseType | NullPointerException e) {
+            System.out.println(e.getMessage());;
+        }
+
     }
 
 }

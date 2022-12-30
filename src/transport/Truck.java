@@ -1,6 +1,7 @@
 package transport;
 
 import driver.C;
+import driver.DriverLicense;
 
 public class Truck extends Transport<C> {
 
@@ -34,6 +35,7 @@ public class Truck extends Transport<C> {
     }
 
     private LoadCapacity loadCapacity;
+    private DriverLicense driverLicense = DriverLicense.C;
 
 
     public void start() {
@@ -79,6 +81,14 @@ public class Truck extends Transport<C> {
         this.driver = driver;
     }
 
+    public DriverLicense getDriverLicense() {
+        return driverLicense;
+    }
+
+    public void setDriverLicense(DriverLicense driverLicense) {
+        this.driverLicense = driverLicense;
+    }
+
     public void info() {
         System.out.println("Водитель " + getDriver().getName() + " управляет автомобилем " + getBrand() + " " + getModel() + "и будет участвовать в заезде");
     }
@@ -88,5 +98,16 @@ public class Truck extends Transport<C> {
         System.out.println(loadCapacity.toString());
     }
 
+    @Override
+    public void getDiagnosed() {
+        System.out.println("Транспортное средвство " + getBrand() + " " + getModel() + " прошло диагностику");
+    }
 
+    public void checkingLicense() throws IncorrectLicenseType {
+        if (getDriver().getDriverLicense() == null) {
+            throw new NullPointerException("Необходимо ввести тип прав");
+        } else if (getDriver().getDriverLicense() != driverLicense) {
+            throw new IncorrectLicenseType("Введите другой тип прав");
+        }
+    }
 }

@@ -1,6 +1,7 @@
 package transport;
 
 import driver.D;
+import driver.DriverLicense;
 
 public class Bus extends Transport<D>{
 
@@ -33,6 +34,7 @@ public class Bus extends Transport<D>{
     }
 
     private PeopleCapacity peopleCapacity;
+    private DriverLicense driverLicense = DriverLicense.D;
 
     public void start() {
         System.out.println(getBrand() + " " + getModel() + " начал движение.");
@@ -81,8 +83,31 @@ public class Bus extends Transport<D>{
         this.driver = driver;
     }
 
+    public DriverLicense getDriverLicense() {
+        return driverLicense;
+    }
+
+    public void setDriverLicense(DriverLicense driverLicense) {
+        this.driverLicense = driverLicense;
+    }
+
     public void info() {
         System.out.println("Водитель " + getDriver().getName() + " управляет автомобилем "+ getBrand() + " " + getModel() +  "и будет участвовать в заезде");
     }
 
+    @Override
+    public void getDiagnosed() throws DiagnosticException {
+        try {
+            throw new DiagnosticException("Транспортное средство не подлежит диагностике");
+        } catch (DiagnosticException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    public void checkingLicense() throws IncorrectLicenseType{
+        if (getDriver().getDriverLicense() == null) {
+            throw new NullPointerException("Необходимо ввести тип прав");
+        } else if (getDriver().getDriverLicense() != driverLicense) {
+            throw new IncorrectLicenseType("Введите другой тип прав");
+        }
+    }
 }
