@@ -2,12 +2,15 @@ package transport;
 
 import driver.Driver;
 
+import javax.tools.DiagnosticCollector;
+
 public abstract class Transport<T extends Driver> implements Competitive {
     protected final String brand;
     protected final String model;
 
     protected final double volume;
     protected T driver;
+
     public Transport(String brand, String model, double volume) {
 
         if (brand == null || brand.isEmpty()) {
@@ -32,7 +35,9 @@ public abstract class Transport<T extends Driver> implements Competitive {
     public abstract void stop();
 
     public abstract void pitStop();
+
     public abstract void getBestCircleTime();
+
     public abstract void getMaxSpeed();
 
     public String getBrand() {
@@ -65,5 +70,12 @@ public abstract class Transport<T extends Driver> implements Competitive {
     }
 
     abstract void info();
-    }
+
+    abstract void printType();
+
+    public abstract void getDiagnosed() throws DiagnosticException;
+
+
+
+}
 

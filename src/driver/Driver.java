@@ -4,8 +4,9 @@ public abstract class Driver {
     protected final String name;
     protected boolean licence;
     protected int experience;
+    protected DriverLicense driverLicense;
 
-    public Driver(String name, boolean licence, int experience) {
+    public Driver(String name, boolean licence, int experience, DriverLicense driverLicense) {
         if (name == null || name.isEmpty()) {
             this.name = "Иванов Иван Иванович";
         } else {
@@ -17,6 +18,7 @@ public abstract class Driver {
         } else {
             this.experience = experience;
         }
+        this.driverLicense = driverLicense;
     }
 
     public void toTopUp() {
@@ -48,6 +50,14 @@ public abstract class Driver {
         this.experience = experience;
     }
 
+    public DriverLicense getDriverLicense() {
+        return driverLicense;
+    }
+
+    public void setDriverLicense(DriverLicense driverLicense) {
+        this.driverLicense = driverLicense;
+    }
+
     @Override
     public String toString() {
         return "Driver{" +
@@ -56,4 +66,8 @@ public abstract class Driver {
                 ", experience=" + experience +
                 '}';
     }
+
+
 }
+
+

@@ -1,11 +1,48 @@
 package transport;
 
 import driver.B;
+import driver.DriverLicense;
 
 import java.time.LocalDate;
 
 public class Car extends Transport<B> {
-    private B driver;
+    public enum BodyType {
+        SIDAN("Сидан"),
+        HETCHBACK("Хэчбэк"),
+        COUPE("Купе"),
+        UNIVERSAL("Универсал"),
+        OFFROAD("Внедорожник"),
+        CROSSOVER("Кроссовер"),
+        PICKUP("Пикап"),
+        VAN("Фургон"),
+        MINIVAN("Минивэн");
+        private final String bodyType;
+
+        BodyType(String bodyType) {
+            this.bodyType = bodyType;
+        }
+
+        public String getBodyType() {
+            return bodyType;
+        }
+
+
+        @Override
+        public String toString() {
+            return "Тип кузова: " + bodyType;
+        }
+    }
+
+    private BodyType bodyType;
+    private DriverLicense driverLicense = DriverLicense.B;
+
+    public BodyType getBodyType() {
+        return bodyType;
+    }
+
+    public void setBodyType(BodyType bodyType) {
+        this.bodyType = bodyType;
+    }
 
     @Override
     public B getDriver() {
@@ -16,7 +53,15 @@ public class Car extends Transport<B> {
         this.driver = driver;
     }
 
-    public Car(String brand, String model, double volume) {
+    public DriverLicense getDriverLicense() {
+        return driverLicense;
+    }
+
+    public void setDriverLicense(DriverLicense driverLicense) {
+        this.driverLicense = driverLicense;
+    }
+
+    public Car(String brand, String model, double volume, BodyType bodyType) {
         super(brand, model, volume);
     }
 
@@ -35,6 +80,11 @@ public class Car extends Transport<B> {
     }
 
     @Override
+    void printType() {
+        System.out.println(bodyType.toString());
+    }
+
+    @Override
     public void getBestCircleTime() {
         System.out.println("Лучшее время круга у " + getBrand() + " " + getModel() + " - 41 секунд");
     }
@@ -45,7 +95,19 @@ public class Car extends Transport<B> {
     }
 
     public void info() {
-        System.out.println("Водитель " + getDriver().getName() + " управляет автомобилем "+ getBrand() + " " + getModel() +  "и будет участвовать в заезде.");
+        System.out.println("Водитель " + getDriver().getName() + " управляет автомобилем " + getBrand() + " " + getModel() + "и будет участвовать в заезде.");
     }
 
+    @Override
+    public void getDiagnosed() {
+        System.out.println("Транспортное средвство " + getBrand() + " " + getModel() + " прошло диагностику");
+    }
+
+    public void checkingLicense() throws IncorrectLicenseType{
+        if (getDriver().getDriverLicense() == null) {
+            throw new NullPointerException("Необходимо ввести тип прав");
+        } else if (getDriver().getDriverLicense() != driverLicense) {
+            throw new IncorrectLicenseType("Введите другой тип прав");
+        }
+    }
 }
