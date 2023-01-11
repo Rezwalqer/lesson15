@@ -7,9 +7,7 @@ import transport.Bus;
 import transport.Car;
 import transport.Truck;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -94,6 +92,14 @@ public class Main {
         System.out.println(mechanic2Autos);
         System.out.println();
         mechanic1.fixAuto(lada);
+
+        Map<Transport, Mechanic> transportMechanicMap = new HashMap<>();
+        transportMechanicMap.put(lada, mechanic1);
+        transportMechanicMap.put(lada, mechanic1); // для проверки;
+        transportMechanicMap.put(bmw, mechanic2);
+        transportMechanicMap.put(truck1, mechanic3);
+        transportMechanicMap.put(ford, mechanic4);
+        System.out.println(transportMechanicMap);
 
 
     }

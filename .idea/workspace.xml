@@ -4,26 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fce18c4-a366-41ce-80d2-22d96c4fedb0" name="Changes" comment="Работа с исключениями">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Race.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/driver/Counter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/driver/DriverLicense.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/driver/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mechanic/Mechanic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mechanic/MechanicCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/transport/CarType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/transport/DiagnosticException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/transport/IncorrectLicenseType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transport/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transport/Bus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transport/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transport/Car.java" afterDir="false" />
+    <list default="true" id="3fce18c4-a366-41ce-80d2-22d96c4fedb0" name="Changes" comment="Домашняя работа по теме &quot;HashMap&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mechanic/Mechanic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mechanic/Mechanic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transport/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transport/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transport/Transport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transport/Transport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transport/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transport/Truck.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="hw17" />
+        <entry key="$PROJECT_DIR$" value="hw18" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -100,7 +85,7 @@
       <workItem from="1673254300005" duration="587000" />
       <workItem from="1673269905456" duration="597000" />
       <workItem from="1673350924409" duration="7042000" />
-      <workItem from="1673419065054" duration="11755000" />
+      <workItem from="1673419065054" duration="12864000" />
     </task>
     <task id="LOCAL-00001" summary="Дженерики ДЗ.">
       <created>1671976278917</created>
@@ -137,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672398352192</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Домашняя работа по теме &quot;Коллекции&quot;">
+      <created>1673440201961</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673440201961</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +139,8 @@
     <MESSAGE value="Дженерики ДЗ." />
     <MESSAGE value="ДЗ от 28.12. ENUM" />
     <MESSAGE value="Работа с исключениями" />
-    <option name="LAST_COMMIT_MESSAGE" value="Работа с исключениями" />
+    <MESSAGE value="Домашняя работа по теме &quot;Коллекции&quot;" />
+    <MESSAGE value="Домашняя работа по теме &quot;HashMap&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Домашняя работа по теме &quot;HashMap&quot;" />
   </component>
 </project>

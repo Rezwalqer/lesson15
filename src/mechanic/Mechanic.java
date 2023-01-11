@@ -59,9 +59,8 @@ public class Mechanic {
 
     @Override
     public String toString() {
-        return "Имя механика: " + name + '\'' +
+        return " Имя механика: " + name + '\'' +
                 ", компания: " + company + '\'' +
-                ", категория авто: " + carTypes +
-                '}';
+                ", категория авто: " + carTypes;
     }
 }

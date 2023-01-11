@@ -60,11 +60,9 @@ public abstract class Transport<T extends Driver> implements Competitive {
 
     @Override
     public String toString() {
-        return "Transport{" +
-                "brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                ", volume=" + volume +
-                '}';
+        return "Марка автомобиля: " + brand + '\'' +
+                ", модель: " + model + '\'' +
+                ", объем двигателя: " + volume;
     }
 
     public T getDriver() {
