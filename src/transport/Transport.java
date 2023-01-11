@@ -1,8 +1,11 @@
 package transport;
 
 import driver.Driver;
+import mechanic.Mechanic;
+import mechanic.MechanicCategory;
 
 import javax.tools.DiagnosticCollector;
+import java.util.List;
 
 public abstract class Transport<T extends Driver> implements Competitive {
     protected final String brand;
@@ -10,6 +13,9 @@ public abstract class Transport<T extends Driver> implements Competitive {
 
     protected final double volume;
     protected T driver;
+    protected Mechanic mechanic;
+    protected CarType mechanicCategory;
+
 
     public Transport(String brand, String model, double volume) {
 
@@ -54,11 +60,9 @@ public abstract class Transport<T extends Driver> implements Competitive {
 
     @Override
     public String toString() {
-        return "Transport{" +
-                "brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                ", volume=" + volume +
-                '}';
+        return "Марка автомобиля: " + brand + '\'' +
+                ", модель: " + model + '\'' +
+                ", объем двигателя: " + volume;
     }
 
     public T getDriver() {
@@ -73,7 +77,27 @@ public abstract class Transport<T extends Driver> implements Competitive {
 
     abstract void printType();
 
+    public CarType getMechanicCategory() {
+        return mechanicCategory;
+    }
+
+
+    public void addMechanic(Mechanic mechanic, List<Mechanic>mechanics, List<String>autos) {
+        if (mechanic.getCarTypes().contains(this.getMechanicCategory())) {
+            mechanics.add(mechanic);
+            autos.add(this.brand);
+        } else {
+            System.out.println("Данный механник не имеет нужной категории!");
+        }
+    }
+
+    public Mechanic getMechanic() {
+        return mechanic;
+    }
+
     public abstract void getDiagnosed() throws DiagnosticException;
+
+
 
 
 
