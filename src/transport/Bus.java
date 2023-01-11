@@ -2,8 +2,11 @@ package transport;
 
 import driver.D;
 import driver.DriverLicense;
+import mechanic.Mechanic;
+import mechanic.MechanicCategory;
 
 public class Bus extends Transport<D>{
+    private final CarType mechanicCategory = CarType.D;
 
     public Bus(String brand, String model, double volume) {
         super(brand, model, volume);
@@ -36,6 +39,7 @@ public class Bus extends Transport<D>{
     private PeopleCapacity peopleCapacity;
     private DriverLicense driverLicense = DriverLicense.D;
 
+
     public void start() {
         System.out.println(getBrand() + " " + getModel() + " начал движение.");
     }
@@ -59,6 +63,7 @@ public class Bus extends Transport<D>{
     public void getBestCircleTime() {
         System.out.println("Лучшее время круга у " + getBrand() + " " + getModel() + " - 59 секунд");
     }
+
 
     public PeopleCapacity getPeopleCapacity() {
         return peopleCapacity;

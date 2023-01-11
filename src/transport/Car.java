@@ -2,10 +2,12 @@ package transport;
 
 import driver.B;
 import driver.DriverLicense;
+import mechanic.MechanicCategory;
 
 import java.time.LocalDate;
 
 public class Car extends Transport<B> {
+    private final CarType mechanicCategory = CarType.B;
     public enum BodyType {
         SIDAN("Сидан"),
         HETCHBACK("Хэчбэк"),
@@ -47,6 +49,10 @@ public class Car extends Transport<B> {
     @Override
     public B getDriver() {
         return driver;
+    }
+
+    public CarType getMechanicCategory() {
+        return mechanicCategory;
     }
 
     public void setDriver(B driver) {
@@ -102,6 +108,7 @@ public class Car extends Transport<B> {
     public void getDiagnosed() {
         System.out.println("Транспортное средвство " + getBrand() + " " + getModel() + " прошло диагностику");
     }
+
 
     public void checkingLicense() throws IncorrectLicenseType{
         if (getDriver().getDriverLicense() == null) {

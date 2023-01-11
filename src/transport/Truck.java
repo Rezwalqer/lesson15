@@ -2,8 +2,10 @@ package transport;
 
 import driver.C;
 import driver.DriverLicense;
+import mechanic.MechanicCategory;
 
 public class Truck extends Transport<C> {
+    private final CarType mechanicCategory = CarType.C;
 
     public Truck(String brand, String model, double volume) {
         super(brand, model, volume);
@@ -76,6 +78,7 @@ public class Truck extends Transport<C> {
     public C getDriver() {
         return driver;
     }
+
 
     public void setDriver(C driver) {
         this.driver = driver;
