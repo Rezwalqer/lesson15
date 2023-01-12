@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3fce18c4-a366-41ce-80d2-22d96c4fedb0" name="Changes" comment="Домашняя работа по теме &quot;HashMap&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transport/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transport/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="hw18" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2JGnS0CjWGrsdsGLSfrdUxdCbcp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="transport" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3fce18c4-a366-41ce-80d2-22d96c4fedb0" name="Changes" comment="" />
+      <created>1671713283058</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1671713283058</updated>
+      <workItem from="1671713284129" duration="200000" />
+      <workItem from="1671713510825" duration="12000" />
+      <workItem from="1671713532329" duration="633000" />
+      <workItem from="1671965144827" duration="7000" />
+      <workItem from="1671975750655" duration="1107000" />
+      <workItem from="1671976888550" duration="90000" />
+      <workItem from="1671977000257" duration="112000" />
+      <workItem from="1671977178048" duration="98000" />
+      <workItem from="1671977301303" duration="5916000" />
+      <workItem from="1672036525650" duration="6394000" />
+      <workItem from="1672060539731" duration="31000" />
+      <workItem from="1672145605175" duration="625000" />
+      <workItem from="1672224781972" duration="6765000" />
+      <workItem from="1672286787339" duration="4487000" />
+      <workItem from="1672332679281" duration="795000" />
+      <workItem from="1672379235883" duration="11350000" />
+      <workItem from="1672500518897" duration="527000" />
+      <workItem from="1673254300005" duration="587000" />
+      <workItem from="1673269905456" duration="597000" />
+      <workItem from="1673350924409" duration="7042000" />
+      <workItem from="1673419065054" duration="13000000" />
+      <workItem from="1673441508159" duration="708000" />
+      <workItem from="1673458259812" duration="52000" />
+      <workItem from="1673515800904" duration="547000" />
+      <workItem from="1673525791361" duration="306000" />
+    </task>
+    <task id="LOCAL-00001" summary="Дженерики ДЗ.">
+      <created>1671976278917</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671976278917</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Дженерики ДЗ.">
+      <created>1671982667637</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671982667637</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Дженерики ДЗ.">
+      <created>1672037416565</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672037416565</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ДЗ от 28.12. ENUM">
+      <created>1672292857181</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672292857181</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Работа с исключениями">
+      <created>1672398352192</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672398352192</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Домашняя работа по теме &quot;Коллекции&quot;">
+      <created>1673440201961</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673440201961</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Домашняя работа по теме &quot;HashMap&quot;">
+      <created>1673441083317</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1673441083317</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Дженерики ДЗ." />
+    <MESSAGE value="ДЗ от 28.12. ENUM" />
+    <MESSAGE value="Работа с исключениями" />
+    <MESSAGE value="Домашняя работа по теме &quot;Коллекции&quot;" />
+    <MESSAGE value="Домашняя работа по теме &quot;HashMap&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Домашняя работа по теме &quot;HashMap&quot;" />
+  </component>
+</project>
