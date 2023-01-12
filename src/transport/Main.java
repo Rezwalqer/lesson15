@@ -103,7 +103,7 @@ public class Main {
         System.out.println(transportMechanicMap);
 
 
-        //ДЗ по теме Set:
+        //ДЗ по теме Set
 
         List<Driver> allDrivers = new ArrayList<>();
         Collections.addAll(allDrivers, driver1, driver2, driver3, driver4, driver5, driver6);
