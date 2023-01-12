@@ -42,7 +42,8 @@ public class Main {
         C driver4 = new C("Иванов Александр Сергеевич", true, 15, DriverLicense.C);
         D driver5 = new D("Иванов Владимир Владимирович", true, 25, DriverLicense.D);
         D driver6 = new D("Иванов Антон Антонович", true, 27, null);
-        List<Driver> allDrivers = new ArrayList<>();
+
+
 
         truck1.setDriver(driver3);
         truck1.info();
@@ -100,6 +101,17 @@ public class Main {
         transportMechanicMap.put(truck1, mechanic3);
         transportMechanicMap.put(ford, mechanic4);
         System.out.println(transportMechanicMap);
+
+
+        //ДЗ по теме Set:
+
+        List<Driver> allDrivers = new ArrayList<>();
+        Collections.addAll(allDrivers, driver1, driver2, driver3, driver4, driver5, driver6);
+        Set<Driver> drivers = new HashSet<>(allDrivers);
+        Iterator<Driver> iterator = drivers.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next().getName());
+        }
 
 
     }
